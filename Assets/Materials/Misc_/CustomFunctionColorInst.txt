@@ -1,0 +1,6 @@
+float4 _Colors[1023];   // Max instanced batch size.
+float4 InstColor_float(){
+    #ifdef UNITY_INSTANCING_ENABLED
+        Out = _Colors[instanceID];
+    #endif
+}
